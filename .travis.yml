@@ -8,10 +8,10 @@ env:
 
 cache:
   directories:
-    - .cabal
+    - $HOME/.cabal
 
 install:
-  - .travis/install-shellcheck.sh "${SHELLCHECK_VERSION}"
+  - .travis/install-shellcheck.sh $SHELLCHECK_VERSION
   - .travis/install-shfmt.sh
 
 before_script:
