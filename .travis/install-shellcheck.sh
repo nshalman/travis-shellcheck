@@ -4,7 +4,7 @@ set -e
 
 check_and_install () {
 	~/.cabal/bin/shellcheck --version | grep -q ${SHELLCHECK_VERSION}
-	cp ~/.cabal/bin/shellcheck /usr/local/bin/shellcheck
+	sudo install -D -m 755 -t /usr/local/bin  ~/.cabal/bin/shellcheck
 	exit 0
 }
 
