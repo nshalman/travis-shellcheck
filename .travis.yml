@@ -12,7 +12,8 @@ cache:
 
 install:
   - .travis/install-shellcheck.sh $SHELLCHECK_VERSION
-  - .travis/install-shfmt.sh
+# not yet
+#  - .travis/install-shfmt.sh
 
 before_script:
   - make prepare
