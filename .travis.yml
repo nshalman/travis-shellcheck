@@ -1,0 +1,23 @@
+language: bash
+sudo: required
+dist: trusty
+
+env:
+  global:
+    - SHELLCHECK_VERSION=0.4.4
+
+cache:
+  directories:
+    - .cabal
+
+install:
+  - .travis/install-shellcheck.sh
+
+before_script:
+  - make prepare
+
+script:
+  - make test
+
+after_success:
+  - make optional
