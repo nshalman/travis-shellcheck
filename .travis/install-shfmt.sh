@@ -3,7 +3,7 @@
 set -o errexit
 set -o xtrace
 
-export GOPATH=~/.go
+export GOPATH=~/.go-shfmt-cache
 BINARY="${GOPATH}/bin/shfmt"
 
 check_and_install() {
