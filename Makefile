@@ -5,4 +5,4 @@ prepare:
 test:
 	shellcheck .travis/*.sh
 after_success:
-	@echo yay!
+	shfmt -l .travis/*.sh

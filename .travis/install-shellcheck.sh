@@ -6,9 +6,9 @@ set -o xtrace
 SHELLCHECK_VERSION="${1}"
 [[ -n "${SHELLCHECK_VERSION}" ]]
 
-check_and_install () {
+check_and_install() {
 	~/.cabal/bin/shellcheck --version | grep -q "${SHELLCHECK_VERSION}"
-	sudo install -D -m 755 -t /usr/local/bin  ~/.cabal/bin/shellcheck
+	sudo install -D -m 755 -t /usr/local/bin ~/.cabal/bin/shellcheck
 	exit 0
 }
 

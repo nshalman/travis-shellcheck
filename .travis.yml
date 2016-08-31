@@ -9,11 +9,11 @@ env:
 cache:
   directories:
     - $HOME/.cabal
+    - $HOME/.go
 
 install:
+  - .travis/install-shfmt.sh
   - .travis/install-shellcheck.sh $SHELLCHECK_VERSION
-# not yet
-#  - .travis/install-shfmt.sh
 
 before_script:
   - make prepare
